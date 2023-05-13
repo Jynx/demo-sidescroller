@@ -7,8 +7,9 @@ int main()
     InitWindow(windowWidth, windowHeight, "Dasher");
 
     const int jumpVal{-20};
-
     const int gravity{1};
+    int velocity{0};
+
     Texture2D scarfy = LoadTexture("textures/scarfy.png");
 
     Rectangle scarfyRec;
@@ -21,8 +22,6 @@ int main()
     scarfyPos.x = windowWidth / 2 - scarfyRec.width / 2;
     scarfyPos.y = windowHeight - scarfyRec.height;
 
-    int velocity{0};
-
     SetTargetFPS(60);
 
     bool isJumping{false};
@@ -31,7 +30,6 @@ int main()
     {
         BeginDrawing();
         ClearBackground(RAYWHITE);
-
 
         if (scarfyPos.y >= windowHeight - scarfyRec.height)
         {
