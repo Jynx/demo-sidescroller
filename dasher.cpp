@@ -9,7 +9,7 @@ struct AnimData
     float runningTime;
 };
 
-bool IsOnGround(AnimData data, int windowHeight)
+bool IsOnGround(AnimData &data, int windowHeight)
 {
     return data.pos.y >= windowHeight - data.rec.height;
 }
@@ -171,7 +171,7 @@ int main()
             updateAnimData(nebulae[i], deltaTime, 8);
         }
 
-        for (AnimData nebula : nebulae)
+        for (AnimData &nebula : nebulae)
         {
             float pad{30};
 
