@@ -195,11 +195,11 @@ int main()
 
         if (collision)
         {
-            DrawText("Game Over!", windowDimensions[0] / 4, windowDimensions[1] / 2, 40, RED);
+            DrawText("Game Over!", windowDimensions[0] / 4 + 20, windowDimensions[1] / 2 - 20 , 40, RED);
         }
         else if (scarfyData.pos.x >= finishLine)
         {
-            DrawText("You Win!", windowDimensions[0] / 4, windowDimensions[1] / 2, 40, GREEN);
+            DrawText("You Win!", windowDimensions[0] / 4 + 50, windowDimensions[1] / 2 - 20, 40, GREEN);
         }
         else
         {
